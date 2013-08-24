@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="10" height="10" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" width="20" height="15" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="Test" tilewidth="32" tileheight="32">
-  <image source="../graphics/tileset.png" width="64" height="32"/>
+  <image source="../graphics/tileset.png" width="96" height="32"/>
  </tileset>
- <layer name="layer1" width="10" height="10">
+ <objectgroup name="objects" width="20" height="15">
+  <object name="1-1" type="portal" x="160" y="352" width="16" height="32">
+   <properties>
+    <property name="to" value="1-2"/>
+   </properties>
+  </object>
+  <object name="1-2" type="portal" x="160" y="96" width="16" height="32">
+   <properties>
+    <property name="to" value="1-1"/>
+   </properties>
+  </object>
+  <object name="trap1" type="kill" x="320" y="387" width="64" height="29"/>
+  <object name="bonus" type="bonus" x="166" y="262" width="19" height="19"/>
+  <object name="platform" type="platform" x="416" y="134" width="192" height="19">
+   <properties>
+    <property name="length" value="2"/>
+    <property name="speed" value="120"/>
+   </properties>
+  </object>
+  <object name="platform" type="platform" x="32" y="326" width="128" height="19">
+   <properties>
+    <property name="length" value="1"/>
+    <property name="speed" value="60"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="layer1" width="20" height="15">
   <data encoding="base64" compression="zlib">
-   eJxjYmBgYCICMxKJcalFN4dUc4m1E5e5xNhFib/JMRsbBgBrVACH
+   eJxjYmBgYKIyphbAZR657qCn+0hRT4x55LibEv+S4w5qhwc+PQMdv/SOD1LMw5YXmKF4IMKPmhgA38sAyw==
   </data>
  </layer>
- <layer name="collision" width="10" height="10">
+ <layer name="collision" width="20" height="15" opacity="0.41">
   <data encoding="base64" compression="zlib">
-   eJxjYmBgYCICEwtwqUU3h1RzibUTl7nE2EWJv8kxGxsGADdIAEU=
+   eJxjYmBgYKIyphbAZR657qCn+0hRT4x55LibEv+S4w5qhwc+PQMdv/SOD1LMw5cXBiL8qIkB2ycAxQ==
   </data>
  </layer>
 </map>
