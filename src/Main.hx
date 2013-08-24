@@ -6,7 +6,7 @@ class Main extends Engine
 	override public function init()
 	{
 		#if debug HXP.console.enable(); #end
-		// HXP.scene = new YourScene();
+		HXP.scene = new scenes.Game();
 	}
 
 	public static function main() 

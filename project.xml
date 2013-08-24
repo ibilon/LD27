@@ -13,11 +13,13 @@
 
 	<haxelib name="openfl" />
 	<haxelib name="HaxePunk" />
+	<haxelib name="HaxePunkTmx" />
 
 	<assets path="assets/graphics" rename="gfx" include="*.png|*.jpg" />
 	<assets path="assets/audio" rename="sfx" include="*.mp3" if="flash" />
 	<assets path="assets/audio" rename="sfx" include="*.wav|*.ogg" unless="flash" />
 	<assets path="assets/font" rename="font" include="*.ttf" />
+	<assets path="assets/maps" rename="maps" include="*.tmx" />
 
 	<icon path="assets/HaxePunk.svg" />
 </project>
