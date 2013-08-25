@@ -11,6 +11,7 @@ class Bonus extends Entity
 		super(obj.x, obj.y);
 		
 		type = "bonus";
+		layer = 1;
 		setHitbox(obj.width, obj.height);
 		
 		var s = new Spritemap("gfx/bonus.png", 20, 20);

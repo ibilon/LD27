@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="20" height="15" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="Test" tilewidth="32" tileheight="32">
-  <image source="../graphics/tileset.png" width="96" height="32"/>
+  <image source="../graphics/tileset.png" width="192" height="96"/>
  </tileset>
+ <layer name="layer" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjY2BgYKES5gFiVgbqAVYc5rET4RYOEsyjtvu4cKgHuRubuwiZx01AH6nmEQOYyDAPl/9whQc57gPZwYfDHnrFL6F4JNU8cgHILE4s4uj5QwCImaGYnwF//qAmYMXiFkowLxADAOYIAh4=
+  </data>
+ </layer>
+ <layer name="collision" width="20" height="15" opacity="0.41">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYKQyphbAZR657qCn+0hRT4x55LibEv+S4w5qhwc+PQMdv/SOD1LMw5cXCIUfNQG1yxUQBgDvRABi
+  </data>
+ </layer>
  <objectgroup name="objects" width="20" height="15">
   <object name="1-1" type="portal" x="160" y="352" width="16" height="32">
    <properties>
+    <property name="color" value="0xFF00FF"/>
     <property name="to" value="1-2"/>
    </properties>
   </object>
   <object name="1-2" type="portal" x="160" y="96" width="16" height="32">
    <properties>
+    <property name="color" value="0xFF00FF"/>
     <property name="to" value="1-1"/>
    </properties>
   </object>
-  <object name="trap1" type="kill" x="320" y="387" width="64" height="29"/>
+  <object name="trap1" type="kill" x="320" y="387" width="64" height="29">
+   <properties>
+    <property name="etype" value="top"/>
+   </properties>
+  </object>
   <object name="bonus" type="bonus" x="166" y="262" width="19" height="19"/>
   <object name="platform" type="platform" x="416" y="134" width="192" height="19">
    <properties>
@@ -38,15 +54,6 @@
     <property name="activate" value="d1"/>
    </properties>
   </object>
+  <object name="start" type="start" x="256" y="288" width="32" height="32"/>
  </objectgroup>
- <layer name="layer1" width="20" height="15">
-  <data encoding="base64" compression="zlib">
-   eJxjYmBgYKIyphbAZR657qCn+0hRT4x55LibEv+S4w5qhwc+PQMdv/SOD1LMw5YXmKF4IMKPmhgA38sAyw==
-  </data>
- </layer>
- <layer name="collision" width="20" height="15" opacity="0.41">
-  <data encoding="base64" compression="zlib">
-   eJxjYmBgYKIyphbAZR657qCn+0hRT4x55LibEv+S4w5qhwc+PQMdv/SOD1LMw5cXBiL8qIkB2ycAxQ==
-  </data>
- </layer>
 </map>

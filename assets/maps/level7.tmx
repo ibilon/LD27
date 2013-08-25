@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32">
+  <image source="../graphics/tileset.png" width="192" height="128"/>
+ </tileset>
+ <layer name="layer" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJzNlFkKgDAMRANaFfcN739UE7Q4FsTQRjAw9CPDIxstiCg/tbJm0AK5Jw/6KpYj27DilaxWwRNfpWQ6BU8TNfAmumYZE1L/BjyL+hy8KTzsM4Ynvfn7k5vr6ZhVZ1RfGF/w/H5Tdoy8P94z8hq6/x8jKws0vOS9R/a8A9L5AvM=
+  </data>
+ </layer>
+ <layer name="collision" width="20" height="15" opacity="0.47">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYETCyIARB0YHhOQpAdQyj1j3keIHavmXEYmmNByR9dLKfdQwhxzzsPmNFv7FZh81zaNWXhms6RndPGqUHzA5AK0kAEg=
+  </data>
+ </layer>
+ <objectgroup name="objects" width="20" height="15">
+  <object name="start" type="start" x="32" y="416" width="32" height="32"/>
+  <object name="1-1" type="portal" x="40" y="320" width="16" height="32">
+   <properties>
+    <property name="color" value="0x0000FF"/>
+    <property name="to" value="1-2"/>
+   </properties>
+  </object>
+  <object name="1-2" type="portal" x="40" y="32" width="16" height="32">
+   <properties>
+    <property name="color" value="0x0000FF"/>
+    <property name="to" value="1-1"/>
+   </properties>
+  </object>
+  <object name="2-1" type="portal" x="40" y="128" width="16" height="32">
+   <properties>
+    <property name="color" value="0x00FF00"/>
+    <property name="to" value="2-2"/>
+   </properties>
+  </object>
+  <object name="2-2" type="portal" x="368" y="224" width="16" height="32">
+   <properties>
+    <property name="color" value="0x00FF00"/>
+    <property name="to" value="2-1"/>
+   </properties>
+  </object>
+  <object type="kill" x="160" y="451" width="128" height="29">
+   <properties>
+    <property name="etype" value="top"/>
+   </properties>
+  </object>
+  <object type="kill" x="416" y="451" width="160" height="29">
+   <properties>
+    <property name="etype" value="top"/>
+   </properties>
+  </object>
+  <object type="kill" x="128" y="0" width="96" height="29">
+   <properties>
+    <property name="etype" value="bottom"/>
+   </properties>
+  </object>
+  <object type="kill" x="416" y="0" width="128" height="29">
+   <properties>
+    <property name="etype" value="bottom"/>
+   </properties>
+  </object>
+  <object type="platform" x="130" y="329" width="96" height="19">
+   <properties>
+    <property name="length" value="1"/>
+    <property name="speed" value="60"/>
+   </properties>
+  </object>
+  <object type="platform" x="96" y="102" width="160" height="19">
+   <properties>
+    <property name="length" value="2"/>
+    <property name="speed" value="60"/>
+   </properties>
+  </object>
+  <object type="platform" x="416" y="358" width="160" height="19">
+   <properties>
+    <property name="length" value="1"/>
+    <property name="speed" value="60"/>
+   </properties>
+  </object>
+  <object name="Finaly the last room." type="text" x="128" y="168" width="150" height="33"/>
+  <object name="Hey! How do I know that?" type="text" x="128" y="230" width="150" height="33"/>
+ </objectgroup>
+</map>

@@ -19,9 +19,10 @@ class Platform extends Entity
 		super(obj.x, obj.y);
 		
 		type = "solid";
+		layer = 1;
 		width = Std.parseInt(obj.custom.resolve("length"))*32;
-		height = obj.height;		
-		graphic = Image.createRect(width, obj.height, 0x111111);
+		height = obj.height;
+		graphic = new graphs.PlatGr(width, height);
 		
 		length = obj.width;
 		speed = Std.parseInt(obj.custom.resolve("speed"));
