@@ -3,9 +3,7 @@ import com.haxepunk.HXP;
 import com.haxepunk.Sfx;
 
 class Main extends Engine
-{
-	static var music : Sfx;
-	
+{	
 	public function new ()
 	{
 		super(640, 480, 60);
@@ -13,14 +11,12 @@ class Main extends Engine
 	
 	override public function init()
 	{
-		music = new Sfx("sfx/bu-the-forests-villages.mp3");
 		
-	#if debug
+	#if debug 
 		HXP.console.enable();
 		HXP.scene = new scenes.Game();
-	#else		
-		music.loop();		
-		HXP.scene = new scenes.OpeningLogos();
+	#else	
+		HXP.scene = new scenes.MainMenu();
 	#end
 	}
 

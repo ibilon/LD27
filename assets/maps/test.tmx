@@ -28,6 +28,16 @@
     <property name="speed" value="60"/>
    </properties>
   </object>
+  <object name="d1" type="mechanism" x="464" y="352" width="16" height="32">
+   <properties>
+    <property name="etype" value="door"/>
+   </properties>
+  </object>
+  <object name="b1" type="button" x="256" y="211" width="13" height="13">
+   <properties>
+    <property name="activate" value="d1"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="layer1" width="20" height="15">
   <data encoding="base64" compression="zlib">

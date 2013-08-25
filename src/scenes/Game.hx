@@ -1,9 +1,9 @@
 package scenes;
 
 import com.haxepunk.Scene;
+import com.haxepunk.Sfx;
 import com.haxepunk.graphics.Image;
 import com.haxepunk.tmx.*;
-import flash.display.BitmapData;
 
 import entities.*;
 
@@ -11,19 +11,21 @@ class Game extends Scene
 {
 	private var portals : Map<String, Portal>;
 	private var player : Player;
+	private var music : Sfx;
 	
 	override public function begin ()
 	{
+		music = new Sfx("sfx/bu-the-forests-villages.mp3");
+		music.loop();
+		
 		addGraphic(new Image("gfx/back.png"));
 		
 		portals = new Map<String, Portal>();
 		
 		var map : TmxMap = new TmxMap(openfl.Assets.getText("maps/test.tmx"));
-		var bitmapData : BitmapData = openfl.Assets.getBitmapData('gfx/tileset.png', true);
 		
-		var e = new TmxEntity(map);//, bitmapData, checkTiles, ["layer1"]);
-		e.loadGraphic(bitmapData, ["layer1"]);
-		//e.setCollidable(checkTiles, "ground");
+		var e = new TmxEntity(map);
+		e.loadGraphic("gfx/tileset.png", ["layer1"]);
 		e.loadMask("collision", "solid");
 		add(e);
 		
